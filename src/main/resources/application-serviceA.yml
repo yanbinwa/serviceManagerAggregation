@@ -1,0 +1,25 @@
+serviceProperties :
+    serviceDataProperties:
+        serviceGroupName : "aggregation"
+        serviceName : "aggregation_A"
+        ip : "172.18.0.81"
+        port : 8131
+        rootUrl : "/aggregation"
+        topicInfo : "{\"consumers\":{\"aggregationTopic\":[\"aggregationTopic_1\"]}}"
+    zNodeInfoProperties:
+        regZnodePath : "/regManageNode"
+        regZnodeChildPath : "/regManageNode/regManageChildNode"
+        depZnodePath : "/depManageNode"
+        zookeeperHostport : "172.18.0.11:2191,172.18.0.12:2192,172.18.0.13:2193"
+    kafkaProperties:
+        consumers:
+            aggregationTopic_1:
+                brokerList : "172.18.0.41:9101,172.18.0.42:9102,172.18.0.43:9103"
+                consumerTopic : "aggregationTopic_1"
+                groupId : "aggregationTopic"
+                deserializerClass : "org.apache.kafka.common.serialization.StringDeserializer"
+
+
+tomcatPort : 8131
+
+logging.file : "/opt/aggregation/log/console.log"
