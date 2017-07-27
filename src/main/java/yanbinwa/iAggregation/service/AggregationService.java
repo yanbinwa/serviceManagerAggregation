@@ -3,9 +3,10 @@ package yanbinwa.iAggregation.service;
 import org.springframework.beans.factory.InitializingBean;
 
 import yanbinwa.common.exceptions.ServiceUnavailableException;
+import yanbinwa.common.iInterface.ConfigServiceIf;
 import yanbinwa.common.iInterface.ServiceLifeCycle;
 
-public interface AggregationService  extends InitializingBean, ServiceLifeCycle 
+public interface AggregationService extends InitializingBean, ServiceLifeCycle, ConfigServiceIf
 {
     
     public static final String SERVICE_IP = "ip";
