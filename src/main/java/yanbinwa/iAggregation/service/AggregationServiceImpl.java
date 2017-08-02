@@ -202,7 +202,6 @@ public class AggregationServiceImpl implements AggregationService
         logger.info("Start work aggregation service ...");
         init();
         client.start();
-        isRunning = true;
     }
 
     @Override
@@ -211,7 +210,6 @@ public class AggregationServiceImpl implements AggregationService
         logger.info("Stop work aggregation service ...");
         client.stop();
         reset();
-        isRunning = false;
     }
     
     private void init()
